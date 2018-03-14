@@ -19,19 +19,20 @@
 	<div class="main_contain">
 		
 		<div class="box"><div class="box_c">
-		<div class="box1"><div class="box_content">
-			<div info="商铺1" class="dian1"><div class="dian_content">
-				<div class="box_page top"></div>
-				<div class="box_page bottom"></div>
-				<div class="box_page left"></div>
-				<div class="box_page right"></div>
-				<div class="box_page before"></div>
-				<div class="box_page after"></div>
+			<div class="middle_line"></div>
+			<div class="box1"><div class="box_content">
+				<div info="商铺1" class="dian1"><div class="dian_content">
+					<div class="box_page top"></div>
+					<div class="box_page bottom"></div>
+					<div class="box_page left"></div>
+					<div class="box_page right"></div>
+					<div class="box_page before"></div>
+					<div class="box_page after"></div>
+				</div></div>
+				
+				<div info="地面" class="bland_ground"></div>
+				
 			</div></div>
-			
-			<div info="地面" class="bland_ground"></div>
-			
-		</div></div>
 		</div></div>
 		
 		
@@ -42,8 +43,8 @@
 	<!-- 上下左右控制 -->
 	<!-- <div aid="1" class="main_btn top"></div> -->
 	<!-- <div aid="2" class="main_btn down"></div> -->
-	<!-- <div aid="3" class="main_btn left"></div> -->
-	<!-- <div aid="4" class="main_btn right"></div> -->
+	<div aid="3" class="main_btn left"></div>
+	<div aid="4" class="main_btn right"></div>
 	<div aid="5" class="main_btn center"></div>
 	<div aid="6" class="main_btn center2"></div>
 	<div aid="7" class="main_btn roll1"></div>
@@ -104,12 +105,12 @@ $(function(){
 			case '4':g.numX-=10;break;//右
 			case '5':compute();break;//前
 			case '6':compute(1);break;//后
-			case '7':g.numL-=2;break;//左转
-			case '8':g.numL+=2;break;//右转
+			case '7':g.numL+=3;break;//左转
+			case '8':g.numL-=3;break;//右转
 			default:break;
 		}
-		$('.box1').css({'transform':'translateX('+g.numX+'px) translateZ('+g.numZ+'px) translateY('+g.numY+'px)','transform-origin':'center center;'});
-		$('.box').css({'transform':'rotateY('+g.numL+'deg) translateY(-190px) translateX(0px) translateZ(0px) ','transform-origin':'center center;'});
+		$('.box1').css({'transform':'translateX('+g.numX+'px) translateZ('+g.numZ+'px) translateY('+g.numY+'px)'});
+		$('.box').css({'transform':'rotateY('+g.numL+'deg) translateY(0px) translateX(0px) translateZ(0px) '});
 	}
 	//计算运动的时候 Z轴 X轴运动多少 
 	function compute(is){
