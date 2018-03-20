@@ -40,18 +40,11 @@ html,body{height:100%;margin:0;padding:0;font-size:17px;font-family:MicrosoftYaH
   -ms-user-select:none;
   user-select:none;
 }
-.left_menu_div{position:fixed;width:20%;height:100%;left:0;right:0;top:0;bottom:0;background-color:#000000;}
-.main_table{transform: translate3d(0,0,0);position:fixed;width:100%;height:300%;left:0;right:0;top:0;bottom:0;background-color:#000000;}
-.admin .main_table{width:80%;height:100%;left:20%;}
+/* 最外层两个容器 */
+.main_table{transform:translate3d(0,0,0);position:fixed;width:100%;height:100%;left:0;right:0;top:0;bottom:0;background-color:#000000;}
+.main_contain{position:relative;width:100%;height:100%;perspective:500px;transform-style:preserve-3d;}
 
-.main_contain{position:relative;width:100%;height:300%;}
-.main_contain{perspective: 200px;transform-style:preserve-3d;}
-
-/* 地面 */
-.bland_ground{transform-style: preserve-3d;position:absolute;left:-300%;bottom:0;width:1000%;height:10000px;border:1px solid #ffffff;background:url('../img/bland_ground1.jpg') no-repeat center center;background-size:cover;
-        transform:rotateX(90deg);transform-origin:center bottom;}
-.bland_ground{border:5px dashed #ff552e;background:none;background-color:#001e50;}
-
+/* 控制按钮 */
 .main_btn{right:10px;bottom:10px;position:absolute;display:inline-block;width:73px;height:73px;}
 .main_btn.top{right:79px;bottom:148px;background:url('../img/cro_t.png') no-repeat center center;background-size:contain;}
 .main_btn.down{right:79px;bottom:12px;background:url('../img/cro_b.png') no-repeat center center;background-size:contain;}
@@ -63,31 +56,46 @@ html,body{height:100%;margin:0;padding:0;font-size:17px;font-family:MicrosoftYaH
 .main_btn.roll2{width:19px;height:40px;right:74px;bottom:95px;background:url('../img/slide1.png') no-repeat center center;background-size:contain;}
 
 
-.box1,.box{border:2px solid #ffffff;transform-origin:center center;transform:translateZ(20px);transform-style:preserve-3d;
-      position:absolute;width:500px;height:500px;left:50%;top:50%;margin:-250px 0 0 -250px;}
-.box1 .box_content,.box .box_c{position:relative;width:500px;height:500px;transform-style:preserve-3d;}
-.box1{width:500px;height:500px;left:0;top:0;margin:0;}
 
-.box1,.box{width:100%;height:300%;left:0;right:0;bottom:0;margin:0;}
-.box1 .box_content,.box .box_c{width:100%;height:300%;}
 
-/* 商铺 */
-.dian1{transform-origin:center center;transform:translateZ(-0px);transform-style:preserve-3d;
-      position:absolute;width:800px;height:800px;left:0;bottom:6px;}
-.dian1 .dian_content{position:relative;width:800px;height:800px;transform-style:preserve-3d;}
-
-.box_page{transform-style:preserve-3d;color:#ffffff;font-size:20px;text-align:center;line-height:800px;width:800px;height:800px;transform-style: preserve-3d;
-	 border:2px solid #ffffff;position:absolute;}
-.box_page.top{transform:rotateX(-90deg);transform-origin:center top;background:url('../img/twar.jpg') repeat center center;background-size:contain;}
-.box_page.bottom{transform:rotateX(90deg);transform-origin:center bottom;background:url('../img/bwar.jpg') repeat center center;background-size:contain;}
-.box_page.left{transform:rotateY(90deg);transform-origin:left center;background:url('../img/war.jpg') repeat center center;background-size:contain;}
-.box_page.right{transform:rotateY(-90deg);transform-origin:right center;background:url('../img/war.jpg') repeat center center;background-size:contain;}
-.box_page.before{}
-.box_page.after{transform:translateZ(-800px);background:url('../img/war.jpg') repeat center center;background-size:contain;}
-
+/* 视图窗口 */
+.view{border:2px solid #ffffff;transform-origin:center center;transform:translateZ(20px);transform-style:preserve-3d;
+      position:absolute;width:100%;height:100%;bottom:0;left:0;}
+.view .viewc{position:relative;width:100%;height:100%;transform-style:preserve-3d;}
 .middle_line{position:absolute;width:2px;background-color:#1eff00;height:100%;left:50%;margin-left:-1px;}
 
 
+/* 世界容器 */
+.world{border:2px solid #ffffff;transform-origin:center center;transform:translateZ(20px);transform-style:preserve-3d;
+      position:absolute;width:100%;height:100%;bottom:0;left:0;}
+.world .worldc{position:relative;width:100%;height:100%;transform-style:preserve-3d;}
+
+/* 地面 */
+.bland_ground{transform-style: preserve-3d;position:absolute;left:0;bottom:0;width:100%;height:10000px;border:1px solid #ffffff;background:url('../img/bland_ground1.jpg') no-repeat center center;background-size:cover;
+        transform:rotateX(90deg);transform-origin:center bottom;}
+.bland_ground{border:5px dashed #ff552e;background:none;background-color:#001e50;}
+
+
+
+/* 一个元素 元素的上面下面必须是正方形 */
+.ele{position:absolute;transform-origin:center center;transform-style:preserve-3d;}
+.elec{position:relative;width:100%;height:100%;transform-style:preserve-3d;}
+.suf{width:100%;height:100%;position:absolute;border:2px solid #ffffff;transform-style: preserve-3d;}
+.suf.after{transform:translateZ(-100px);}
+.suf.before{}
+.suf.top{transform:rotateX(-90deg);transform-origin:center top;}
+.suf.bottom{bottom:-4px;transform:rotateX(90deg);transform-origin:center bottom;}
+.suf.left{transform:rotateY(90deg);transform-origin:left center;}
+.suf.right{transform:rotateY(-90deg);transform-origin:right center;}
+
+
+
+
+/* 盒子1 */
+.shop1{width:500px;height:200px;left:400px;bottom:100px;transform:translateZ(-0px);} /* 设置盒子宽度高度 位置 */
+.shop1 .suf.top{height:500px;} /* =width */
+.shop1 .suf.bottom{height:500px;} /* =width */
+.shop1 .suf.after{transform:translateZ(-500px);}  /* =width */
 
 
 
