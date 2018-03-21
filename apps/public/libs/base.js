@@ -25,8 +25,8 @@
 	//var serverUrl = "http://192.168.1.234:8084/3audit/";//xihai
 	//var serverUrl = "http://192.168.1.181:8085/3audit/";//qiaorong
 	//var serverUrl = "http://api.3audit.cn/3audit/";
-	var serverUrl = "/attp/index.php/home/index/";
-	var imgUrl = "/attp/upload/";
+	var serverUrl = "/pro/index.php/home/index/";
+	var imgUrl = "/pro/upload/";
 	var imgUrl2 = "/api/public/api/image2";
 	
 	
