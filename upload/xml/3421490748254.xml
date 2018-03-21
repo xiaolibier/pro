@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<story uuid="" readed="false">
+  <frame id="0" mark="false" style="fade:0;">
+    <image>58da2131cc6b24ac3000002c.jpg</image>
+    <halfman>58da51f53360a6c84a8b456f.jpg</halfman>
+    <music>0.jpg</music>
+    <seffect>0.jpg</seffect>
+    <role style="font:24;fontName:隶书"></role>
+    <context style="font:24;fontName:隶书"></context>
+  </frame>
+  <frame id="1" mark="false" style="fade:2;">
+    <image>58da51f53360a6c84a8b456f.jpg</image>
+    <halfman>58da210ccc6b24ac30000029.jpg</halfman>
+    <music>0.jpg</music>
+    <seffect>0.jpg</seffect>
+    <role style="font:24;fontName:隶书"></role>
+    <context style="font:24;fontName:隶书"></context>
+  </frame>
+  <frame id="2" mark="false" style="fade:6;">
+    <image>58da51f53360a6c84a8b456f.jpg</image>
+    <halfman>58da51f53360a6c84a8b456f.jpg</halfman>
+    <music>0.jpg</music>
+    <seffect>0.jpg</seffect>
+    <role style="font:24;fontName:隶书"></role>
+    <context style="font:24;fontName:隶书"></context>
+  </frame>
+  <frame id="3" mark="false" style="fade:0;">
+    <image>58da51f53360a6c84a8b456f.png</image>
+    <halfman>58da51f53360a6c84a8b456f.png</halfman>
+    <music>0.jpg</music>
+    <seffect>0.jpg</seffect>
+    <role style="font:24;fontName:隶书"></role>
+    <context style="font:24;fontName:隶书"></context>
+  </frame>
+</story>

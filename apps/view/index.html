@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta name="format-detection" content="telephone=no"/>
+	<link rel="stylesheet" href="../public/css/common.css" />
+	<title>主页</title> 
+	<style>
+		
+	</style>
+</head>
+<body class="index">
+
+<div class="main_table">
+	<div class="main_contain">
+		<div info="视图" class="view"><div class="viewc">
+			<div class="middle_line"></div>
+			<div info="所有元素容器" class="world"><div id="world_html" class="worldc">
+				<!-- 元素容器 -->
+				
+				<!-- <div title="盒子1" class="ele shop1"><div class="elec">
+					<div class="suf top" style="background:url('../public/img/twar.jpg') repeat center center;background-size:contain;"></div>
+					<div class="suf bottom" style="background:url('../public/img/bwar.jpg') repeat center center;background-size:contain;"></div>
+					<div class="suf left" style="background:url('../public/img/war.jpg') repeat center center;background-size:contain;"></div>
+					<div class="suf right" style="background:url('../public/img/war.jpg') repeat center center;background-size:contain;"></div>
+					<div class="suf before"></div>
+					<div class="suf after" style="background:url('../public/img/war.jpg') repeat center center;background-size:contain;"></div>
+				</div></div>
+				<div info="地面" class="bland_ground"></div> -->
+				
+				<!-- 元素容器 -->
+			</div></div>
+		</div></div>
+		
+		
+	</div>
+	<!-- 上下左右控制 -->
+	<div class="control_btns">
+		<div aid="1" class="main_btn top"></div>
+		<div aid="2" class="main_btn down"></div>
+		<div aid="3" class="main_btn left"></div>
+		<div aid="4" class="main_btn right"></div>
+		<div aid="5" class="main_btn center"></div>
+		<div aid="6" class="main_btn center2"></div>
+		<div aid="7" class="main_btn roll1"></div>
+		<div aid="8" class="main_btn roll2"></div>
+	</div>
+	
+	<!-- 工具窗 -->
+	<div info="工具窗" class="tool">
+		<div class="toolc">
+			<h4 class="tool_t">SetTools<a class="close_btn" href="javascript:;">X</a></h4>
+			<ul class="tools_ul">
+				<li class="li">
+					<span class="lab">名称:</span>
+					<input id="name" class="value_input values name" type="text" />
+				</li>
+				<li class="li">
+					<span class="lab">宽度:</span><a class="value_btn values" href="javascript:;">+</a>
+					<input id="width" class="value_input values" type="text" /><a class="value_btn values" href="javascript:;">-</a>
+				</li>
+				<li class="li">
+					<span class="lab">高度:</span><a class="value_btn values" href="javascript:;">+</a>
+					<input id="height" class="value_input values" type="text" /><a class="value_btn values" href="javascript:;">-</a>
+				</li>
+				<li class="li">
+					<span class="lab">长度:</span><a class="value_btn values" href="javascript:;">+</a>
+					<input id="long" class="value_input values" type="text" /><a class="value_btn values" href="javascript:;">-</a>
+				</li>
+				<li class="li">
+					<span class="lab">translateX:</span><a class="value_btn values" href="javascript:;">+</a>
+					<input id="translatex" class="value_input values" type="text" /><a class="value_btn values" href="javascript:;">-</a>
+				</li>
+				<li class="li">
+					<span class="lab">translateY:</span><a class="value_btn values" href="javascript:;">+</a>
+					<input id="translatey" class="value_input values" type="text" /><a class="value_btn values" href="javascript:;">-</a>
+				</li>
+				<li class="li">
+					<span class="lab">translateZ:</span><a class="value_btn values" href="javascript:;">+</a>
+					<input id="translatez" class="value_input values" type="text" /><a class="value_btn values" href="javascript:;">-</a>
+				</li>
+				<li class="li">
+					<span class="lab">rotateX:</span><a class="value_btn values" href="javascript:;">+</a>
+					<input id="rotatex" class="value_input values" type="text" /><a class="value_btn values" href="javascript:;">-</a>
+				</li>
+				<li class="li">
+					<span class="lab">rotateY:</span><a class="value_btn values" href="javascript:;">+</a>
+					<input id="rotatey" class="value_input values" type="text" /><a class="value_btn values" href="javascript:;">-</a>
+				</li>
+				<li class="li">
+					<span class="lab">rotateZ:</span><a class="value_btn values" href="javascript:;">+</a>
+					<input id="rotatez" class="value_input values" type="text" /><a class="value_btn values" href="javascript:;">-</a>
+				</li>
+				<li class="li">
+					<a class="save_btn type3 uploadbtn" href="javascript:;">顶部图片</a>
+					<input id="topsrc" class="value_input values src" type="text" />
+					<input name="file" class="headUpload orderMaterialFile" type="file"/>
+				</li>
+				<li class="li">
+					<a class="save_btn type3 uploadbtn" href="javascript:;">底部图片</a>
+					<input id="bottomsrc" class="value_input values src" type="text" />
+					<input name="file" class="headUpload orderMaterialFile" type="file"/>
+				</li>
+				<li class="li">
+					<a class="save_btn type3 uploadbtn" href="javascript:;">左边图片</a>
+					<input id="leftsrc" class="value_input values src" type="text" />
+					<input name="file" class="headUpload orderMaterialFile" type="file"/>
+				</li>
+				<li class="li">
+					<a class="save_btn type3 uploadbtn" href="javascript:;">右边图片</a>
+					<input id="rightsrc" class="value_input values src" type="text" />
+					<input name="file" class="headUpload orderMaterialFile" type="file"/>
+				</li>
+				<li class="li">
+					<a class="save_btn type3 uploadbtn" href="javascript:;">前面图片</a>
+					<input id="beforesrc" class="value_input values src" type="text" />
+					<input name="file" class="headUpload orderMaterialFile" type="file"/>
+				</li>
+				<li class="li">
+					<a class="save_btn type3 uploadbtn" href="javascript:;">后面图片</a>
+					<input id="aftersrc" class="value_input values src" type="text" />
+					<input name="file" class="headUpload orderMaterialFile" type="file"/>
+				</li>
+				
+				
+			</ul>
+			<div class="btns_div">
+				<a class="save_btn" id="changeOne" href="javascript:;">保存数据</a>
+				<a class="save_btn type2" id="deleteOne" href="javascript:;">删除元素</a>
+				<a class="save_btn type3" id="createOne" href="javascript:;">新增元素</a>
+			</div>
+		</div>
+	</div>
+	
+</div>
+	<script type="text/javascript" src="../public/libs/jquery.min.js"></script>
+	<script type="text/javascript" src="../public/libs/json.js"></script>
+	<script type="text/javascript" src="../public/libs/base.js"></script>
+	<script type="text/javascript" src="../public/libs/layer.js"></script>
+	<script type="text/javascript" src="../public/libs/utils.js"></script>
+	<script type="text/javascript" src="../public/libs/ajaxfileupload.js"></script>
+	<script type="text/javascript" src="../public/js/common2.js"></script>
+	<script type="text/javascript" src="../public/js/index.js"></script>
+</body>
+</html>
