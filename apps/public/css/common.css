@@ -35,7 +35,7 @@ html,body{height:100%;margin:0;padding:0;font-size:17px;font-family:MicrosoftYaH
 
 
 /* 最外层两个容器 */
-.main_table{transform:translate3d(0,0,0);position:fixed;width:100%;height:100%;left:0;right:0;top:0;bottom:0;background-color:#000000;}
+.main_table{transform:translate3d(0,0,0);position:fixed;height:100%;left:198px;right:0;top:0;bottom:0;background-color:#000000;}
 .main_contain{position:relative;width:100%;height:100%;perspective:500px;transform-style:preserve-3d;}
 
 /* 工具窗口 */
@@ -51,13 +51,15 @@ html,body{height:100%;margin:0;padding:0;font-size:17px;font-family:MicrosoftYaH
 .tools_ul .value_input{width:40px;font-size:14px;border:1px solid #8b8b8b;border-top:none;border-bottom:none;background-color:#ffffff;}
 .tools_ul .value_input.name{margin-left:3px;width:125px;text-align:left;padding-left:3px;border-right:none;}
 .tools_ul .value_input.src{width:92px;text-align:left;padding-left:3px;border-right:none;}
-.tool .btns_div{text-align:center;}
-.tool .save_btn{margin-bottom:5px;border-radius:4px;padding:5px 10px;color:#ffffff;background-color:#30A2F6;line-height: 18px;font-size: 13px;transition:all .2s ease-in-out;display:inline-block;}
+.tool .btns_div{text-align:center;overflow:hidden;}
+.tool .save_btn{float:left;margin:2px 2px;border-radius:4px;padding:5px 10px;color:#ffffff;background-color:#30A2F6;line-height: 18px;font-size: 13px;transition:all .2s ease-in-out;display:inline-block;}
 .tool .save_btn:hover{background-color:#0f81d5;}
 .tool .save_btn.type2{background-color:#FF3D55;}
 .tool .save_btn.type2:hover{background-color:#de1c34;}
 .tool .save_btn.type3{background-color:#92ca7e;}
 .tool .save_btn.type3:hover{background-color:#7db569;}
+.tool .save_btn.type4{background-color:#F6C243;}
+.tool .save_btn.type4:hover{background-color:#e3af30;}
 .tool .save_btn.uploadbtn{float:left;margin:0;padding:3px 10px;border-radius:0;}
 
 .headUpload{cursor:pointer;z-index:2;opacity:0;position:absolute;left:0;top:0;width:72px;height:24px;}
@@ -101,16 +103,16 @@ html,body{height:100%;margin:0;padding:0;font-size:17px;font-family:MicrosoftYaH
 
 
 /* 一个元素 元素的上面下面必须是正方形 */
-.ele{position:absolute;transform-origin:center center;transform-style:preserve-3d;}
+.ele{cursor:pointer;position:absolute;transform-origin:center center;transform-style:preserve-3d;}
 .elec{position:relative;width:100%;height:100%;transform-style:preserve-3d;}
-.suf{width:100%;height:100%;position:absolute;border:2px solid #ffffff;transform-style: preserve-3d;}
+.suf{cursor:pointer;width:100%;height:100%;position:absolute;border:2px solid #ffffff;transform-style: preserve-3d;}
 .suf.after{transform:translateZ(-100px);}
 .suf.before{}
 .suf.top{transform:rotateX(-90deg);transform-origin:center top;}
 .suf.bottom{bottom:-4px;transform:rotateX(90deg);transform-origin:center bottom;}
 .suf.left{transform:rotateY(90deg);transform-origin:left center;}
-.suf.right{transform:rotateY(-90deg);transform-origin:right center;}
-
+.suf.right{right:-3px;transform:rotateY(-90deg);transform-origin:right center;}
+.ele.active .suf{border:2px solid #1064c4;}
 
 
 

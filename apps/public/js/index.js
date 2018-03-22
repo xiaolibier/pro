@@ -34,7 +34,9 @@ $(function(){
 	$('#changeOne').on('click',function(){ changeOne(2); });//修改元素
 	$('#deleteOne').on('click',deleteOne);//删除元素
 	$('#createOne').on('click',function(){ changeOne(1); });//创建元素
+	$('#clearInput').on('click',function(){ $('.tool').find('input').val(''); });//清空输入框
 	$('#world_html').on('click','.ele',function(){ choiseOne($(this)) });//选择元素
+	$('#world_html').on('click','.suf',function(){var obj = $(this).parents('.ele'); choiseOne(obj) });//选择元素
 	
 	
 	
@@ -88,7 +90,7 @@ $(function(){
 	//实时编辑元素
 	function setITValue(){
 		var data = {},condi = [];
-		if($('.ele.active').length <= 0){console.log(1);$('.tools_ul').find('input').val('');Utils.alert("请先选择元素！");return false;}
+		if($('.ele.active').length <= 0){Utils.alert("请先选择元素！");return false;}
 		data = setInfoCondi(data,'.tools_ul','.li');//传值
 		if(data == false){return false;}
 		condi.push(data);
@@ -222,21 +224,28 @@ $(function(){
 			var rightsrc = d.rightsrc || '';
 			var beforesrc = d.beforesrc || '';
 			var aftersrc = d.aftersrc || '';
-			var transform = ' transform: translateX('+tX+'px) translateY('+tY+'px) translateZ('+tZ+'px) '
-			+'rotateX('+rX+'deg) rotateY('+rY+'deg) rotateZ('+rZ+'deg);';
+			var transform = ' transform:';
+			if(tX != '') transform+=' translateX('+tX+'px) ';
+			if(tY != '') transform+=' translateY('+tY+'px) ';
+			if(tZ != '') transform+=' translateZ('+tZ+'px) ';
+			if(rX != '') transform+=' rotateX('+rX+'px) ';
+			if(rY != '') transform+=' rotateY('+rY+'px) ';
+			if(rZ != '') transform+=' rotateZ('+rZ+'px) ';
+			transform+=';';
+			
 			var style = 'width:'+width+'px;height:'+height+'px;'+transform;
 			if(left != '') style+='left:'+left+'px;';
 			if(_top != '') style+='top:'+_top+'px;';
 			if(right != '') style+='right:'+right+'px;';
 			if(bottom != '') style+='bottom:'+bottom+'px;';
 			
-			html+='<div title="'+name+'" aid="'+id+'" style="'+style+'" class="ele shop1 '+isnew+' element'+id+'"><div class="elec">'
-					+'<div class="suf top" style="height:'+height+'px;background:url('+topsrc+') no-repeat center center;background-size:cover;"></div>'
-					+'<div class="suf bottom" style="height:'+height+'px;background:url('+bottomsrc+') no-repeat center center;background-size:cover;"></div>'
-					+'<div class="suf left" style="background:url('+leftsrc+') no-repeat center center;background-size:cover;"></div>'
-					+'<div class="suf right" style="background:url('+rightsrc+') no-repeat center center;background-size:cover;"></div>'
-					+'<div class="suf before" style="background:url('+beforesrc+') no-repeat center center;background-size:cover;"></div>'
-					+'<div class="suf after" style="transform:translateZ(-'+height+'px);background:url('+aftersrc+') no-repeat center center;background-size:cover;"></div>'
+			html+='<div title="'+name+'" aid="'+id+'" style="'+style+'" class="ele '+isnew+' element'+id+'"><div class="elec">'
+					+'<div class="suf top" style="width:'+width+'px;height:'+_long+'px;background:url('+topsrc+') no-repeat center center;background-size:cover;"></div>'
+					+'<div class="suf bottom" style="width:'+width+'px;height:'+_long+'px;background:url('+bottomsrc+') no-repeat center center;background-size:cover;"></div>'
+					+'<div class="suf left" style="width:'+_long+'px;height:'+height+'px;background:url('+leftsrc+') no-repeat center center;background-size:cover;"></div>'
+					+'<div class="suf right" style="width:'+_long+'px;height:'+height+'px;background:url('+rightsrc+') no-repeat center center;background-size:cover;"></div>'
+					+'<div class="suf before" style="width:'+width+'px;height:'+height+'px;background:url('+beforesrc+') no-repeat center center;background-size:cover;"></div>'
+					+'<div class="suf after" style="width:'+width+'px;height:'+height+'px;transform:translateZ(-'+_long+'px);background:url('+aftersrc+') no-repeat center center;background-size:cover;"></div>'
 				+'</div></div>';
 		}
 		return html;
@@ -312,7 +321,9 @@ $(function(){
 					var tip = is != '1' ? '保存成功！' : '新建成功！' ;
 					Utils.alert(tip);
 					if(is == '1'){//新建项目
-						
+						var d = data.data || {};
+						var id = data.id || '';
+						if(id != ''){g.id = id;}//默认选中新建项
 					}else if(is == '2'){//保存项目
 						
 					}
