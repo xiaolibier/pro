@@ -34,7 +34,7 @@ $(function(){
 	$('#changeOne').on('click',function(){ changeOne(2); });//修改元素
 	$('#deleteOne').on('click',deleteOne);//删除元素
 	$('#createOne').on('click',function(){ changeOne(1); });//创建元素
-	$('#world_html').on('click','.ele',choiseOne);//选择元素
+	$('#world_html').on('click','.ele',function(){ choiseOne($(this)) });//选择元素
 	
 	
 	
@@ -56,8 +56,24 @@ $(function(){
 	
 	//改变工具值
 	$('.tools_ul').on('click','.value_btn',function(){
-		var html = $(this).html() || '';
-		var input = $(this).siblings('.value_input');
+		add($(this));//添加或减少
+	});
+	var inter ;//存定时器
+	$('.tools_ul').on('mousedown','.value_btn',function(){
+		var obj = $(this);
+		inter = setInterval(function(){
+			add(obj);//添加或减少
+		},100);
+	});
+	$(document).on('mouseup',function(){
+		clearInterval(inter);
+	});
+	//添加或减少
+	function add(obj){
+		var _this = obj || $(this);
+		if(_this == ''){console.log('对象不存在！');return false;}
+		var html = _this.html() || '';
+		var input = _this.siblings('.value_input');
 		var num = parseInt(input.val() || '0');
 		if(html.indexOf('+') > -1){//加
 			num++;
@@ -67,19 +83,19 @@ $(function(){
 			input.val(num);
 		}
 		setITValue();//实时编辑元素
-	});
+	}
 	
 	//实时编辑元素
 	function setITValue(){
-		var data = {};
-		if($('.ele.active').length <= 0){$('.tools_ul').find('input').val('');Utils.alert("请先选择元素！");return false;}
+		var data = {},condi = [];
+		if($('.ele.active').length <= 0){console.log(1);$('.tools_ul').find('input').val('');Utils.alert("请先选择元素！");return false;}
 		data = setInfoCondi(data,'.tools_ul','.li');//传值
 		if(data == false){return false;}
-		var html = setVals(data);//获取html
+		condi.push(data);
+		var html = setVals(condi,'new');//获取html
 		$('.ele.active').remove();
 		$('#world_html').append(html);
-		console.log(html);
-		$('.ele:last').addClass('active');
+		$('.ele.new').removeClass('new').addClass('active');
 	}
 	
 	//图片上传
@@ -102,8 +118,8 @@ $(function(){
 				var success=jQuery.parseJSON(data.responseText).success;
                 var src=jQuery.parseJSON(data.responseText).data;
                 if(success){
-					$me.siblings('.value_input').val(src);
 					src = Base.imgUrl + src;
+					$me.siblings('.value_input').val(src);
 					setITValue();//实时编辑元素
 				}else {
 					Utils.alert("图片上传失败");
@@ -113,19 +129,21 @@ $(function(){
 	});
 
 	//选择元素
-	function choiseOne(){
+	function choiseOne(_this){
+		var _this = _this || '';
+		_this = _this == '' ? $(this) : _this;
 		$('#world_html').find('.ele').removeClass('active');
-		$(this).addClass('active');
-		var name = $(this).attr('title') || '';
-		var id = $(this).attr('aid') || '';
+		_this.addClass('active');
+		var name = _this.attr('title') || '';
+		var id = _this.attr('aid') || '';
 		if(id == ''){Utils.alert('当前元素id为空！');return false;}
 		g.id = id;
 		var data = g.allbody || [];//所有元素
 		var condi = '';
 		for(var i=0,len=data.length;i<len;i++){//循环找出匹配项
 			var d = data[i] || {};
-			var id = d.id || '';
-			condi = d;
+			var tid = d.id || '';
+			if(tid == id)condi = d;
 		}
 		if(condi == ''){Utils.alert('当前元素id不存在！');return false;}
 		setCondiVal(condi,'.tools_ul','.li');//赋值
@@ -154,6 +172,9 @@ $(function(){
 					g.allbody = data || [];//存储所有元素
 					var html = setVals(data);//获取html
 					$('#world_html').html(html);
+					if(g.id != ''){//默认选中之前选的元素
+						choiseOne($('.element'+g.id));
+					}
 				}
 				else{
 					var msg = data.message || "失败";
@@ -173,8 +194,9 @@ $(function(){
 	}
 	
 	//元素赋值
-	function setVals(data){
+	function setVals(data,isnew){
 		var data = data || '';
+		var isnew = isnew || '';
 		if(data == ''){return false;}
 		var html = '';
 		for(var i=0,len=data.length;i<len;i++){
@@ -196,17 +218,16 @@ $(function(){
 			var rightsrc = d.rightsrc || '';
 			var beforesrc = d.beforesrc || '';
 			var aftersrc = d.aftersrc || '';
-			
 			var transform = ' transform: translateX('+tX+'px) translateY('+tY+'px) translateZ('+tZ+'px) '
 			+'rotateX('+rX+'deg) rotateY('+rY+'deg) rotateZ('+rZ+'deg);';
 			
-			html+='<div title="'+name+'" aid="'+id+'" style="width:'+width+'px;height:'+height+'px;'+transform+'" class="ele shop1"><div class="elec">'
-					+'<div class="suf top" style="height:'+height+'px;background:url('+topsrc+') repeat center center;background-size:contain;"></div>'
-					+'<div class="suf bottom" style="height:'+height+'px;background:url('+bottomsrc+') repeat center center;background-size:contain;"></div>'
-					+'<div class="suf left" style="background:url('+leftsrc+') repeat center center;background-size:contain;"></div>'
-					+'<div class="suf right" style="background:url('+rightsrc+') repeat center center;background-size:contain;"></div>'
-					+'<div class="suf before" style="background:url('+beforesrc+') repeat center center;background-size:contain;"></div>'
-					+'<div class="suf after" style="transform:translateZ(-'+height+'px);background:url('+aftersrc+') repeat center center;background-size:contain;"></div>'
+			html+='<div title="'+name+'" aid="'+id+'" style="width:'+width+'px;height:'+height+'px;'+transform+'" class="ele shop1 '+isnew+' element'+id+'"><div class="elec">'
+					+'<div class="suf top" style="height:'+height+'px;background:url('+topsrc+') no-repeat center center;background-size:cover;"></div>'
+					+'<div class="suf bottom" style="height:'+height+'px;background:url('+bottomsrc+') no-repeat center center;background-size:cover;"></div>'
+					+'<div class="suf left" style="background:url('+leftsrc+') no-repeat center center;background-size:cover;"></div>'
+					+'<div class="suf right" style="background:url('+rightsrc+') no-repeat center center;background-size:cover;"></div>'
+					+'<div class="suf before" style="background:url('+beforesrc+') no-repeat center center;background-size:cover;"></div>'
+					+'<div class="suf after" style="transform:translateZ(-'+height+'px);background:url('+aftersrc+') no-repeat center center;background-size:cover;"></div>'
 				+'</div></div>';
 		}
 		return html;

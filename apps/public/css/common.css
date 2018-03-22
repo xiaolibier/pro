@@ -66,7 +66,8 @@ html,body{height:100%;margin:0;padding:0;font-size:17px;font-family:MicrosoftYaH
 
 
 /* ¿ØÖÆ°´Å¥ */
-.control_btns{}
+.control_btns{position:fixed;right:0;bottom:0;width:230px;height:230px;z-index:100;}
+.control_btns .control_btns_c{position:relative;width:100%;height:100%;}
 .main_btn{right:10px;bottom:10px;position:absolute;display:inline-block;width:73px;height:73px;}
 .main_btn.top{right:79px;bottom:148px;background:url('../img/cro_t.png') no-repeat center center;background-size:contain;}
 .main_btn.down{right:79px;bottom:12px;background:url('../img/cro_b.png') no-repeat center center;background-size:contain;}
