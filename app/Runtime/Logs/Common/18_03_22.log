@@ -874,3 +874,45 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
 ERR: 无法加载模块:Apps
 
+[ 2018-03-22T11:14:23+08:00 ] 192.168.1.20 /pro/apps/view/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+ERR: 无法加载模块:Apps
+
+[ 2018-03-22T11:14:59+08:00 ] 192.168.1.20 /pro/apps/view/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+ERR: 无法加载模块:Apps
+
+[ 2018-03-22T11:15:57+08:00 ] 192.168.1.20 /pro/apps/view/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+ERR: 无法加载模块:Apps
+
+[ 2018-03-22T11:20:37+08:00 ] 192.168.1.20 /pro/apps/view/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000798s ]
+ERR: 无法加载模块:Apps
+
+[ 2018-03-22T11:21:08+08:00 ] 192.168.1.20 /pro/apps/view/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000960s ]
+ERR: 无法加载模块:Apps
+
+[ 2018-03-22T11:21:43+08:00 ] 192.168.1.20 /pro/apps/view/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+ERR: 无法加载模块:Apps
+
+[ 2018-03-22T11:22:43+08:00 ] 192.168.1.20 /pro/apps/view/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001324s ]
+ERR: 无法加载模块:Apps
+

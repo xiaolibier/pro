@@ -206,6 +206,10 @@ $(function(){
 			var height = d.height || '0';
 			var width = d.width || '0';
 			var _long = d.long || '';
+			var left = d.left || '';
+			var _top = d.top || '';
+			var right = d.right || '';
+			var bottom = d.bottom || '';
 			var tX = d.translatex || '';
 			var tY = d.translatey || '';
 			var tZ = d.translatez || '';
@@ -220,8 +224,13 @@ $(function(){
 			var aftersrc = d.aftersrc || '';
 			var transform = ' transform: translateX('+tX+'px) translateY('+tY+'px) translateZ('+tZ+'px) '
 			+'rotateX('+rX+'deg) rotateY('+rY+'deg) rotateZ('+rZ+'deg);';
+			var style = 'width:'+width+'px;height:'+height+'px;'+transform;
+			if(left != '') style+='left:'+left+'px;';
+			if(_top != '') style+='top:'+_top+'px;';
+			if(right != '') style+='right:'+right+'px;';
+			if(bottom != '') style+='bottom:'+bottom+'px;';
 			
-			html+='<div title="'+name+'" aid="'+id+'" style="width:'+width+'px;height:'+height+'px;'+transform+'" class="ele shop1 '+isnew+' element'+id+'"><div class="elec">'
+			html+='<div title="'+name+'" aid="'+id+'" style="'+style+'" class="ele shop1 '+isnew+' element'+id+'"><div class="elec">'
 					+'<div class="suf top" style="height:'+height+'px;background:url('+topsrc+') no-repeat center center;background-size:cover;"></div>'
 					+'<div class="suf bottom" style="height:'+height+'px;background:url('+bottomsrc+') no-repeat center center;background-size:cover;"></div>'
 					+'<div class="suf left" style="background:url('+leftsrc+') no-repeat center center;background-size:cover;"></div>'

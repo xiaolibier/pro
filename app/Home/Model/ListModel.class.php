@@ -26,7 +26,7 @@ class ListModel extends Model
 	
 	
 	//修改元素信息
-	public function changeOne($id,$name,$width,$height,$long,$translatex,$translatey,$translatez,$rotatex,$rotatey,$rotatez,$topsrc,$bottomsrc,$leftsrc,$rightsrc,$beforesrc,$aftersrc){
+	public function changeOne($id,$name,$width,$height,$long,$left,$top,$right,$bottom,$translatex,$translatey,$translatez,$rotatex,$rotatey,$rotatez,$topsrc,$bottomsrc,$leftsrc,$rightsrc,$beforesrc,$aftersrc){
 		$data = array('success' => 0,'data'=>array(),'message'=>'');
 		$where1 = array('id' => $id);
 		$save = array(
@@ -34,6 +34,10 @@ class ListModel extends Model
 			'width' => $width,
 			'height' => $height,
 			'long' => $long,
+			'left' => $left,
+			'top' => $top,
+			'right' => $right,
+			'bottom' => $bottom,
 			'translatex' => $translatex,
 			'translatey' => $translatey,
 			'translatez' => $translatez,
@@ -66,7 +70,7 @@ class ListModel extends Model
 		return $data;
 	}
 	//新建元素
-	public function createOne($name,$width,$height,$long,$translatex,$translatey,$translatez,$rotatex,$rotatey,$rotatez,$topsrc,$bottomsrc,$leftsrc,$rightsrc,$beforesrc,$aftersrc){
+	public function createOne($name,$width,$height,$long,$left,$top,$right,$bottom,$translatex,$translatey,$translatez,$rotatex,$rotatey,$rotatez,$topsrc,$bottomsrc,$leftsrc,$rightsrc,$beforesrc,$aftersrc){
 		$data = array('success' => 0,'data'=>array(),'message'=>'');
 		$where1 = array('name' => $name);
 		$add = array(
@@ -74,6 +78,10 @@ class ListModel extends Model
 			'width' => $width,
 			'height' => $height,
 			'long' => $long,
+			'left' => $left,
+			'top' => $top,
+			'right' => $right,
+			'bottom' => $bottom,
 			'translatex' => $translatex,
 			'translatey' => $translatey,
 			'translatez' => $translatez,

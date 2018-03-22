@@ -48,6 +48,10 @@ class IndexController extends Controller
 		$width = I('width');//
 		$height = I('height');//
 		$long = I('long');//
+		$left = I('left');//
+		$top = I('top');//
+		$right = I('right');//
+		$bottom = I('bottom');//
 		$translatex = I('translatex');//
 		$translatey = I('translatey');//
 		$translatez = I('translatez');//
@@ -63,7 +67,7 @@ class IndexController extends Controller
 		$data = array('success' => 0,'data'=>array(),'message'=>'');
 		if($id == ''){$data['id'] = '元素id不能为空！';$this->ajaxReturn($data);}
 		$m = D('list');
-		$result = $m->changeOne($id,$name,$width,$height,$long,$translatex,$translatey,$translatez,$rotatex,$rotatey,$rotatez,$topsrc,$bottomsrc,$leftsrc,$rightsrc,$beforesrc,$aftersrc);
+		$result = $m->changeOne($id,$name,$width,$height,$long,$left,$top,$right,$bottom,$translatex,$translatey,$translatez,$rotatex,$rotatey,$rotatez,$topsrc,$bottomsrc,$leftsrc,$rightsrc,$beforesrc,$aftersrc);
 		$this->ajaxReturn($result);
 		
 	}
@@ -73,6 +77,10 @@ class IndexController extends Controller
 		$width = I('width');//
 		$height = I('height');//
 		$long = I('long');//
+		$left = I('left');//
+		$top = I('top');//
+		$right = I('right');//
+		$bottom = I('bottom');//
 		$translatex = I('translatex');//
 		$translatey = I('translatey');//
 		$translatez = I('translatez');//
@@ -88,7 +96,7 @@ class IndexController extends Controller
 		$data = array('success' => 0,'data'=>array(),'message'=>'');
 		if($name == ''){$data['message'] = '名称不能为空！';$this->ajaxReturn($data);}
 		$m = D('list');
-		$result = $m->createOne($name,$width,$height,$long,$translatex,$translatey,$translatez,$rotatex,$rotatey,$rotatez,$topsrc,$bottomsrc,$leftsrc,$rightsrc,$beforesrc,$aftersrc);
+		$result = $m->createOne($name,$width,$height,$long,$left,$top,$right,$bottom,$translatex,$translatey,$translatez,$rotatex,$rotatey,$rotatez,$topsrc,$bottomsrc,$leftsrc,$rightsrc,$beforesrc,$aftersrc);
 		$this->ajaxReturn($result);
 	}
 	//删除元素
