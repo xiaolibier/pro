@@ -35,13 +35,13 @@ $(function(){
 	$('#deleteOne').on('click',deleteOne);//删除元素
 	$('#createOne').on('click',function(){ changeOne(1); });//创建元素
 	$('#clearInput').on('click',function(){ $('.tool').find('input').val(''); });//清空输入框
-	$('#world_html').on('click','.ele',function(){ choiseOne($(this)) });//选择元素
+	//$('#world_html').on('click','.ele',function(){ choiseOne($(this)) });//选择元素
 	$('#world_html').on('click','.suf',function(){var obj = $(this).parents('.ele'); choiseOne(obj) });//选择元素
 	
 	
 	
 	
-	
+	setGetSearchInput2('#name','.choiseDanwei1');
 	
 /*......................setting.......................................*/
 	
@@ -121,6 +121,7 @@ $(function(){
                 var src=jQuery.parseJSON(data.responseText).data;
                 if(success){
 					src = Base.imgUrl + src;
+					src = 'background: url(\''+src+'\') no-repeat center center;background-size:cover';
 					$me.siblings('.value_input').val(src);
 					setITValue();//实时编辑元素
 				}else {
@@ -131,7 +132,7 @@ $(function(){
 	});
 
 	//选择元素
-	function choiseOne(_this){
+	window.choiseOne = function(_this){
 		var _this = _this || '';
 		_this = _this == '' ? $(this) : _this;
 		$('#world_html').find('.ele').removeClass('active');
@@ -171,6 +172,14 @@ $(function(){
 				var status = data.success || false;
 				if(status){
 					var data = data.data || [];
+					var ul = '';
+					for(var i=0,len=data.length;i<len;i++){
+						var d = data[i] || [];
+						var id = d.id || '';
+						var name = d.name || '';
+						ul += '<li onclick="lichoise(\''+id+'\')" tip="'+id+'">'+name+'</li>';
+					}
+					$('.choiseDanwei1').append(ul);
 					g.allbody = data || [];//存储所有元素
 					var html = setVals(data);//获取html
 					$('#world_html').html(html);
@@ -193,6 +202,13 @@ $(function(){
 				$('#world_html').html('');
 			}
 		});
+	}
+	//选择名称
+	window.lichoise = function(id){
+		var id = id || '';
+		if(id == ''){Utils.alert('元素id为空！');return false;}
+		g.id = id;
+		choiseOne($('.element'+g.id));
 	}
 	
 	//元素赋值
@@ -228,9 +244,9 @@ $(function(){
 			if(tX != '') transform+=' translateX('+tX+'px) ';
 			if(tY != '') transform+=' translateY('+tY+'px) ';
 			if(tZ != '') transform+=' translateZ('+tZ+'px) ';
-			if(rX != '') transform+=' rotateX('+rX+'px) ';
-			if(rY != '') transform+=' rotateY('+rY+'px) ';
-			if(rZ != '') transform+=' rotateZ('+rZ+'px) ';
+			if(rX != '') transform+=' rotateX('+rX+'deg) ';
+			if(rY != '') transform+=' rotateY('+rY+'deg) ';
+			if(rZ != '') transform+=' rotateZ('+rZ+'deg) ';
 			transform+=';';
 			
 			var style = 'width:'+width+'px;height:'+height+'px;'+transform;
@@ -240,12 +256,12 @@ $(function(){
 			if(bottom != '') style+='bottom:'+bottom+'px;';
 			
 			html+='<div title="'+name+'" aid="'+id+'" style="'+style+'" class="ele '+isnew+' element'+id+'"><div class="elec">'
-					+'<div class="suf top" style="width:'+width+'px;height:'+_long+'px;background:url('+topsrc+') no-repeat center center;background-size:cover;"></div>'
-					+'<div class="suf bottom" style="width:'+width+'px;height:'+_long+'px;background:url('+bottomsrc+') no-repeat center center;background-size:cover;"></div>'
-					+'<div class="suf left" style="width:'+_long+'px;height:'+height+'px;background:url('+leftsrc+') no-repeat center center;background-size:cover;"></div>'
-					+'<div class="suf right" style="width:'+_long+'px;height:'+height+'px;background:url('+rightsrc+') no-repeat center center;background-size:cover;"></div>'
-					+'<div class="suf before" style="width:'+width+'px;height:'+height+'px;background:url('+beforesrc+') no-repeat center center;background-size:cover;"></div>'
-					+'<div class="suf after" style="width:'+width+'px;height:'+height+'px;transform:translateZ(-'+_long+'px);background:url('+aftersrc+') no-repeat center center;background-size:cover;"></div>'
+					+'<div class="suf top" style="width:'+width+'px;height:'+_long+'px;'+topsrc+';"></div>'
+					+'<div class="suf bottom" style="width:'+width+'px;height:'+_long+'px;'+bottomsrc+';"></div>'
+					+'<div class="suf left" style="width:'+_long+'px;height:'+height+'px;'+leftsrc+';"></div>'
+					+'<div class="suf right" style="width:'+_long+'px;height:'+height+'px;'+rightsrc+';"></div>'
+					+'<div class="suf before" style="width:'+width+'px;height:'+height+'px;'+beforesrc+';"></div>'
+					+'<div class="suf after" style="width:'+width+'px;height:'+height+'px;transform:translateZ(-'+_long+'px);'+aftersrc+';"></div>'
 				+'</div></div>';
 		}
 		return html;

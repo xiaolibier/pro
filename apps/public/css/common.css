@@ -33,6 +33,16 @@ a:hover {
 input:active,input:focus{outline:none;}
 html,body{height:100%;margin:0;padding:0;font-size:17px;font-family:MicrosoftYaHei;}
 
+/* 下拉框 */
+.choiseDanwei{max-height:200px;overflow:hidden;overflow-y:auto;border-radius:4px;box-shadow:0 1px 6px rgba(0, 0, 0, 0.2);margin-left:1px;margin-top:0px;width:89px;background-color:#fff;position:absolute;left:0;top:0;z-index:999;display:block;display:none;}
+.choiseDanwei li{padding:7px 5px;clear:both;overflow:hidden;color:#495060;float:left;font-size:12px;cursor:pointer;text-align:left;display:inline-block;width:93%;line-height:17px;}
+.choiseDanwei li.last{border:none;}
+.choiseDanwei li:last-child{border:none;}
+.choiseDanwei li:hover{color:#000;background-color:#f3f3f3;}
+.choiseDanwei li.active{background-color:#f3f3f3;}
+.serinputClass{margin:5px 2%;width:90%;padding-left:2%;}
+
+
 
 /* 最外层两个容器 */
 .main_table{transform:translate3d(0,0,0);position:fixed;height:100%;left:198px;right:0;top:0;bottom:0;background-color:#000000;}
