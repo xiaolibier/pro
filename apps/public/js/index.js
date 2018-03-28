@@ -179,6 +179,7 @@ $(function(){
 						var name = d.name || '';
 						ul += '<li onclick="lichoise(\''+id+'\')" tip="'+id+'">'+name+'</li>';
 					}
+					$('.choiseDanwei1 li').remove();
 					$('.choiseDanwei1').append(ul);
 					g.allbody = data || [];//存储所有元素
 					var html = setVals(data);//获取html
@@ -366,6 +367,7 @@ $(function(){
 	//关闭工具窗
 	function closeTools(){
 		$('.tool').hide();
+		$('.main_table').css({'left':'0'});
 	}
 	
 	//上下左右移动

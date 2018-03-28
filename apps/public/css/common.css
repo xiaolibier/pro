@@ -45,11 +45,12 @@ html,body{height:100%;margin:0;padding:0;font-size:17px;font-family:MicrosoftYaH
 
 
 /* 最外层两个容器 */
-.main_table{transform:translate3d(0,0,0);position:fixed;height:100%;left:198px;right:0;top:0;bottom:0;background-color:#000000;}
+.main_table{transform:translate3d(0,0,0);position:fixed;height:100%;left:198px;left:0;right:0;top:0;bottom:0;background-color:#000000;}
 .main_contain{position:relative;width:100%;height:100%;perspective:500px;transform-style:preserve-3d;}
 
 /* 工具窗口 */
 .tool{position:fixed;display:inline-block;min-height:200px;width:200px;left:2px;top:2px;bottom:2px;background-color:#e6e6e6;z-index:99;}
+
 .toolc{position:relative;width:100%;height:100%;}
 .toolc .tool_t{border-bottom:1px solid #000000;height:30px;line-height:30px;font-size:14px;position:relative;text-align:center;color:#ffffff;background:url('../img/tool_img1.jpg') repeat-x center center;background-size:auto 100%;}
 .toolc .close_btn{display:inline-block;color:#ffffff;padding:5px 8px;position:absolute;top:3px;right:3px;font-size:11px;line-height:11px;border:1px solid #81858b;border-radius:3px;}
@@ -74,7 +75,8 @@ html,body{height:100%;margin:0;padding:0;font-size:17px;font-family:MicrosoftYaH
 
 .headUpload{cursor:pointer;z-index:2;opacity:0;position:absolute;left:0;top:0;width:72px;height:24px;}
 
-
+.tool.hide{left:-200px;}
+.tool.hide .toolc .close_btn{right:-10px;}
 
 
 /* 控制按钮 */
