@@ -1,0 +1,196 @@
+[ 2018-03-29T08:42:09+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001154s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0007s ]
+
+[ 2018-03-29T08:46:00+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002445s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0006s ]
+
+[ 2018-03-29T08:49:34+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0005s ]
+
+[ 2018-03-29T08:49:37+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000842s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001305s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0009s ]
+
+[ 2018-03-29T08:49:41+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001228s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0008s ]
+
+[ 2018-03-29T08:50:09+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000807s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004096s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0004s ]
+
+[ 2018-03-29T08:50:24+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001172s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001291s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0004s ]
+
+[ 2018-03-29T08:53:05+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000870s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001734s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0004s ]
+
+[ 2018-03-29T08:53:08+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001607s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0005s ]
+
+[ 2018-03-29T08:54:37+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001647s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0005s ]
+
+[ 2018-03-29T08:54:40+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002440s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0005s ]
+
+[ 2018-03-29T08:54:41+08:00 ] 192.168.1.20 /pro/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000935s ]
+ERR: 非法操作:index
+
+[ 2018-03-29T08:55:48+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000852s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001897s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0005s ]
+
+[ 2018-03-29T08:55:51+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001169s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0021s ]
+
+[ 2018-03-29T08:56:03+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000908s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001375s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0005s ]
+
+[ 2018-03-29T08:58:54+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000941s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003114s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0004s ]
+
+[ 2018-03-29T08:58:55+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000894s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001153s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001238s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0008s ]
+
+[ 2018-03-29T08:59:37+08:00 ] 192.168.1.20 /pro/index.php/home/index/getOne
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002801s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `list` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `list`  [ RunTime:0.0005s ]
+

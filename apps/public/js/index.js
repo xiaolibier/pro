@@ -366,8 +366,9 @@ $(function(){
 	
 	//关闭工具窗
 	function closeTools(){
-		$('.tool').hide();
-		$('.main_table').css({'left':'0'});
+		$('.tool').toggleClass('hide');
+		var _left = $('.tool').hasClass('hide') ? 0 : $('.tool').width() ;
+		$('.main_table').css({'left':_left+'px'});
 	}
 	
 	//上下左右移动
