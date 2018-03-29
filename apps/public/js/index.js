@@ -391,8 +391,8 @@ $(function(){
 			case '8':g.numL-=3;break;//右转
 			default:break;
 		}
-		$('.world').css({'transform':'translateX('+g.numX+'px) translateZ('+g.numZ+'px) translateY(0px)'});
-		$('.view').css({'transform':'rotateY('+g.numL+'deg) rotateX('+g.numY+'deg) translateY(0px) translateX(0px) translateZ(0px) '});
+		$('.world').css({'transform':'translateX('+g.numX+'px) translateZ('+g.numZ+'px) translateY('+g.numY+'px) '});
+		$('.view').css({'transform':'rotateY('+g.numL+'deg) rotateX(0deg) translateY(0px) translateX(0px) translateZ(0px) '});
 	}
 	//计算运动的时候 Z轴 X轴运动多少 
 	function compute(is){
